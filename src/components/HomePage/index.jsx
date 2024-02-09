@@ -1,4 +1,4 @@
-const { useState, useEffect } = require("react");
+import { useState, useEffect } from "react"
 
 function HomePage() {
     const [foodPic, setFoodPic] = useState('')
@@ -11,7 +11,7 @@ function HomePage() {
             return response.json()
         }).then(function (data) {
             console.log(data)
-            setFoodPic(data.message)
+            setFoodPic(data.image)
         })
     }
 
